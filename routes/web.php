@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/joy', function () {
+    dd('joy');
+});
+
 
 Route::get('/todo',[TodoController::class,'index'])->name('todolist');
 Route::post('/todo',[TodoController::class,'saveTask'])->name('todolist.save');
